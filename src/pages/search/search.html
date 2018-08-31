@@ -1,0 +1,232 @@
+<ion-header>
+
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+  
+        <ion-title>البحث المتقدم</ion-title>
+              
+      <ion-buttons end>
+        <button ion-button right icon-only (click)="Logout()">
+            <ion-icon name="log-out"></ion-icon>
+        </button>
+      </ion-buttons>
+  
+    </ion-navbar>
+  
+  </ion-header>
+  
+  <ion-content padding>
+  
+    <div padding>
+        <h5>الأساسية</h5>
+    </div>
+  
+    <ion-list>
+
+          <ion-item>
+            <ion-label>الجنس</ion-label>
+            <ion-select [(ngModel)]="gender" okText="اختيار" cancelText="الغاء">
+              <ion-option value="1">ذكر</ion-option>
+              <ion-option value="2">أنثى</ion-option>
+            </ion-select>
+          </ion-item>
+  
+          <ion-item>
+              <ion-label>بيانات مع صور</ion-label>
+              <ion-checkbox color="primary" checked="true"></ion-checkbox>
+            </ion-item>
+          
+            <ion-item>
+                <ion-label>المتواجدون الان</ion-label>
+                <ion-checkbox color="primary" checked="true"></ion-checkbox>
+              </ion-item>
+              
+          <ion-item>
+              <ion-label>اخر تواحد</ion-label>
+              <ion-select [(ngModel)]="lastonline" okText="اختيار" cancelText="الغاء">
+                <ion-option value="1">اليوم</ion-option>
+                <ion-option value="2">أسبوع</ion-option>
+                <ion-option value="2">شهر</ion-option>
+                <ion-option value="2">ثلاتة أشهر</ion-option>
+                <ion-option value="2">سنة</ion-option>
+              </ion-select>
+            </ion-item>
+  
+            <ion-item>
+                <ion-label>تاريخ التسجيل</ion-label>
+                <ion-select [(ngModel)]="dateofstart" okText="اختيار" cancelText="الغاء">
+                  <ion-option value="1">اليوم</ion-option>
+                  <ion-option value="2">أسبوع</ion-option>
+                  <ion-option value="2">شهر</ion-option>
+                  <ion-option value="2">ثلاتة أشهر</ion-option>
+                  <ion-option value="2">سنة</ion-option>
+                </ion-select>
+              </ion-item>
+
+      </ion-list>
+  
+      <div padding>
+          <h5>التفاصيل</h5>
+      </div>
+      
+      <ion-list>
+
+            <ion-item>
+                <ion-label>الهدف</ion-label>
+                <ion-select [(ngModel)]="merrieda" okText="اختيار" cancelText="الغاء">
+                  <ion-option value="1">زواج عادي</ion-option>
+                  <ion-option value="2">زواج مسار</ion-option>
+                </ion-select>
+              </ion-item>
+  
+              <ion-item>
+                  <ion-label>الجنسية</ion-label>
+                  <ion-select [(ngModel)]="Country" okText="اختيار" cancelText="الغاء">
+                    <ion-option value="1">المملة العربية السعودية</ion-option>
+                    <ion-option value="2">المملكة المغربية</ion-option>
+                    <ion-option value="3">الجزائر</ion-option>
+                  </ion-select>
+                </ion-item>
+  
+                <ion-item>
+                    <ion-label>الدولة</ion-label>
+                    <ion-select [(ngModel)]="merriedz" okText="اختيار" cancelText="الغاء">
+                      <ion-option value="1">المملة العربية السعودية</ion-option>
+                      <ion-option value="2">المملكة المغربية</ion-option>
+                      <ion-option value="3">الجزائر</ion-option>
+                    </ion-select>
+                  </ion-item>
+
+                  <ion-item>
+                      <ion-label>العمر</ion-label>
+                      <ion-select [(ngModel)]="merried" okText="اختيار" cancelText="الغاء">
+                        <ion-option value="1">18 - 22</ion-option>
+                        <ion-option value="2">23 - 27</ion-option>
+                        <ion-option value="3">28 - 32</ion-option>
+                      </ion-select>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label>الحالة الاجتماعية</ion-label>
+                        <ion-select [(ngModel)]="encouple" okText="اختيار" cancelText="الغاء">
+                          <ion-option value="1">متزوج</ion-option>
+                          <ion-option value="2">أعزب</ion-option>
+                          <ion-option value="3">مطلق</ion-option>
+                          <ion-option value="4">ارمل</ion-option>
+                        </ion-select>
+                      </ion-item>
+  
+              </ion-list>
+
+              <div padding>
+                  <h5>التفاصيل المتقدمة</h5>
+                  <h6 class="notoo">- عذرا هذه الخدمة متوفرة بعد ترقية العضوية</h6>
+              </div>
+
+              <ion-list>
+
+
+                            <ion-item>
+                                <ion-label>طرق التواصل</ion-label>
+                                <ion-select [(ngModel)]="encouple" okText="اختيار" cancelText="الغاء">
+                                  <ion-option value="1">التطبيق</ion-option>
+                                  <ion-option value="2">الايميل</ion-option>
+                                  <ion-option value="3">ماسنجر</ion-option>
+                                  <ion-option value="4">ماسنجر وكام</ion-option>
+                                </ion-select>
+                              </ion-item>
+            
+                              <ion-item>
+                                  <ion-label>هل لديك أبناء ؟</ion-label>
+                                  <ion-select [(ngModel)]="children" okText="اختيار" cancelText="الغاء">
+                                    <ion-option value="1">نعم</ion-option>
+                                    <ion-option value="2">لا</ion-option>
+                                  </ion-select>
+                                </ion-item>
+                    
+
+                        <ion-item>
+                            <ion-label>المؤهل التعليمي</ion-label>
+                            <ion-select [(ngModel)]="encouple" okText="اختيار" cancelText="الغاء">
+                              <ion-option value="1">غير متعلم</ion-option>
+                              <ion-option value="2">تعليم مدرسي</ion-option>
+                              <ion-option value="3">تعليم جامعي</ion-option>
+                              <ion-option value="4">دراسات عليا</ion-option>
+                              <ion-option value="4">غير دلك</ion-option>
+                            </ion-select>
+                          </ion-item>
+
+                          <ion-item>
+                              <ion-label>المهنة</ion-label>
+                              <ion-select [(ngModel)]="work" okText="اختيار" cancelText="الغاء">
+                                <ion-option value="1">موظف حكومي</ion-option>
+                                <ion-option value="2">موظف قطاع خاص</ion-option>
+                                <ion-option value="3">طالب</ion-option>
+                                <ion-option value="4">أعمال مصرفية</ion-option>
+                              </ion-select>
+                            </ion-item>
+            
+
+                            </ion-list>
+
+              <div padding>
+                  <h5>المظهر</h5>
+              </div>
+              
+              <ion-list>
+                  <ion-item>
+                      <ion-label>لون العينين</ion-label>
+                      <ion-select [(ngModel)]="easy" okText="اختيار" cancelText="الغاء">
+                        <ion-option value="1">بني</ion-option>
+                        <ion-option value="2">أسود</ion-option>
+                        <ion-option value="3">أزرق</ion-option>
+                      </ion-select>
+                    </ion-item>
+            
+                    <ion-item>
+                        <ion-label>لون الشعر</ion-label>
+                        <ion-select [(ngModel)]="encouple" okText="اختيار" cancelText="الغاء">
+                          <ion-option value="1">أسود</ion-option>
+                          <ion-option value="1">بني</ion-option>
+                          <ion-option value="2">أحمر</ion-option>
+                          <ion-option value="3">أزرق</ion-option>
+                        </ion-select>
+                      </ion-item>
+            
+                    <ion-item>
+                        <ion-label>لون الجلد</ion-label>
+                        <ion-select [(ngModel)]="children" okText="اختيار" cancelText="الغاء">
+                          <ion-option value="1">يميل الى البياض</ion-option>
+                          <ion-option value="2">أسمر</ion-option>
+                        </ion-select>
+                      </ion-item>
+          
+                      <ion-item>
+                          <ion-label>الطول</ion-label>
+                          <ion-select [(ngModel)]="encouple" okText="اختيار" cancelText="الغاء">
+                            <ion-option value="1">140</ion-option>
+                            <ion-option value="2">141</ion-option>
+                            <ion-option value="3">142</ion-option>
+                            <ion-option value="4">143</ion-option>
+                          </ion-select>
+                        </ion-item>
+          
+                        <ion-item>
+                            <ion-label>الوزن</ion-label>
+                            <ion-select [(ngModel)]="work" okText="اختيار" cancelText="الغاء">
+                              <ion-option value="1">60 - 70</ion-option>
+                              <ion-option value="2">70 - 75</ion-option>
+                            </ion-select>
+                          </ion-item>
+        
+                    </ion-list>
+
+      <div>
+        <button ion-button full> ابحث </button>
+      </div>
+      
+  
+  </ion-content>
+  

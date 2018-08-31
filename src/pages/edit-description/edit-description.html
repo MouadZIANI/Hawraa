@@ -1,0 +1,43 @@
+<ion-header>
+
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+  
+        <ion-title>تعديل الوصف</ion-title>
+              
+      <ion-buttons end>
+        <button ion-button right icon-only (click)="Logout()">
+            <ion-icon name="log-out"></ion-icon>
+        </button>
+      </ion-buttons>
+  
+    </ion-navbar>
+  
+  </ion-header>
+
+<ion-content padding>
+
+    <div padding>
+        <h5>تعديل الوصف</h5>
+    </div>
+
+    <ion-list>
+
+          <ion-item class="contact.inputform">
+            <ion-textarea placeholder="تحدث عن نفسك" class="contact.inputform" rows="3"></ion-textarea>
+          </ion-item>
+
+          <ion-item class="contact.inputform">
+            <ion-textarea placeholder="تحدث عن شريكك " class="contact.inputform" rows="3"></ion-textarea>
+          </ion-item>
+
+      </ion-list>
+
+      <div>
+        <button ion-button full> حفظ الاعدادات </button>
+      </div>
+      
+
+</ion-content>

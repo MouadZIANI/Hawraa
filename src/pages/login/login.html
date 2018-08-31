@@ -1,0 +1,61 @@
+<ion-header>
+
+  <ion-navbar>
+
+      <ion-title>تسجيل الدخول</ion-title>
+            
+
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+ <br>
+
+ <div text-center>
+     <img src="http://awa.m-apps.co/uploads/2018-04/2ba5f00e80db2b6982cdb74d506eb0e9.png" width="100"/>
+ </div>
+
+ <br>
+
+  <div padding>
+      <h5>تسجيل الدخول</h5>
+  </div>
+
+  <ion-list>
+
+      <ion-item>
+          <ion-label>البريد الالكتروني</ion-label>
+          <ion-input type="email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>كلمة المرور</ion-label>
+          <ion-input type="password"></ion-input>
+        </ion-item>
+    </ion-list>
+
+    <div>
+      <button ion-button full> الدخول 
+      
+          <ion-buttons  icon-only>
+          <ion-icon name="arrow-forward"></ion-icon>
+            </ion-buttons>
+      </button>
+  
+    </div>
+
+    <br>
+
+    <div text-center>
+          <button ion-button full color="secondary" margin-top (click)="RecoverPassword()">  هل نسيت كلمة المرور ؟
+      </button>
+    </div>
+
+    <div text-center>
+          <button ion-button full color="secondary" margin-top (click)="Regitser()"> ليس لديك حساب ؟ سجل الآن! 
+      </button>
+    </div>
+
+</ion-content>

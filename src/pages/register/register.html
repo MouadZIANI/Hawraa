@@ -1,0 +1,103 @@
+<ion-header>
+
+  <ion-navbar>
+
+    <ion-title>تسجيل مستخدم جديد</ion-title>
+            
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+ <br>
+
+ <div text-center>
+     <img src="http://awa.m-apps.co/uploads/2018-04/2ba5f00e80db2b6982cdb74d506eb0e9.png" width="100"/>
+ </div>
+
+ <br>
+
+  <div padding>
+      <h5>سجل الآن! للعثور على شريك حياتك</h5>
+  </div>
+
+  <ion-list>
+      <ion-item>
+        <ion-label>اسم المستخدم</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label>الاسم الكامل</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>رقم الهاتف</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>البريد الاكتروني</ion-label>
+          <ion-input type="email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>تاكيد البريد الاكتروني</ion-label>
+          <ion-input type="email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>كلمة المرور</ion-label>
+          <ion-input type="password"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>الجنس</ion-label>
+          <ion-select [(ngModel)]="gender" okText="اختيار" cancelText="الغاء">
+            <ion-option value="1">ذكر</ion-option>
+            <ion-option value="2">أنثى</ion-option>
+          </ion-select>
+        </ion-item>
+
+         <ion-item>
+          <ion-label>الهدف</ion-label>
+          <ion-select [(ngModel)]="merrieda" okText="اختيار" cancelText="الغاء">
+            <ion-option value="1">زواج عادي</ion-option>
+            <ion-option value="2">زواج مسار</ion-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>الدولة</ion-label>
+          <ion-select [(ngModel)]="merriedz" okText="اختيار" cancelText="الغاء">
+            <ion-option value="1">المملة العربية السعودية</ion-option>
+            <ion-option value="2">المملكة المغربية</ion-option>
+            <ion-option value="3">الجزائر</ion-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item class="contact-inputform">
+         <ion-label>تحدث عن نفسك</ion-label>
+          <ion-textarea rows="3"></ion-textarea>
+        </ion-item>
+
+        <ion-item class="contact-inputform">
+          <ion-label>تحدث عن شريكك</ion-label>
+          <ion-textarea rows="3"></ion-textarea>
+        </ion-item>
+
+    </ion-list>
+
+    <div>
+      <button ion-button full> سجل الآن! 
+      
+          <ion-buttons  icon-only>
+          <ion-icon name="arrow-forward"></ion-icon>
+            </ion-buttons>
+      </button>
+  
+    </div>
+
+</ion-content>

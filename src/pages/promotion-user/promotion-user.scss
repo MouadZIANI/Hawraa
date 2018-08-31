@@ -1,0 +1,37 @@
+page-promotion-user {
+
+    .promotionUserHead {
+        color:color($colors,secondary);
+        line-height: 36px;
+        font-size: 14px;
+        font-family: 'Droid-bold';
+        text-align: center;
+        margin-bottom: 5px
+    }
+
+    .promotionUserHead2 {
+        color:black;
+        line-height: 36px;
+        font-size: 14px;
+        font-family: 'Droid-reguler';
+        text-align: center;
+        margin-bottom: 5px
+    }
+
+    .promotionUserDetailsHead {
+        color:black;
+        line-height: 36px;
+        font-size: 14px;
+        font-family: 'Droid-bold';
+        margin-bottom: 5px
+    }
+
+    .promotionUserDetails {
+        color:black;
+        line-height: 36px;
+        font-size: 14px;
+        font-family: 'Droid-reguler';
+        margin-bottom: 5px
+    }
+
+}

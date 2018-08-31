@@ -1,1 +1,21 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="content" side="right">
+  <ion-header>
+    <ion-toolbar class="navbaro">
+      <img style="width: 90px; height: 90px; border-radius: 50%;text-align: center;" src="http://static.ounousa.com/Content/ResizedImages/638/654/inside/141119114438104.jpg"/>
+      <ion-title>أهلا بك : معاد الداودي</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)" class="Main-menu">
+          <ion-icon name="{{p.icon}}" class="dfu-menu-icon"></ion-icon>
+        {{p.title}}
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

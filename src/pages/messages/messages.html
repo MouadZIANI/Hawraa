@@ -1,0 +1,49 @@
+<ion-header>
+
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+  
+        <ion-title>صندوق البريد</ion-title>
+              
+      <ion-buttons end>
+        <button ion-button right icon-only (click)="Logout()">
+            <ion-icon name="log-out"></ion-icon>
+        </button>
+      </ion-buttons>
+  
+    </ion-navbar>
+  
+  </ion-header>
+  
+  <ion-content padding>
+
+
+      <div padding>
+          <ion-segment [(ngModel)]="pet">
+            <ion-segment-button value="inbox">
+              الرسائل الصادرة
+            </ion-segment-button>
+            <ion-segment-button value="sendmessagess">
+              الرسائل الواردة
+            </ion-segment-button>
+          </ion-segment>
+        </div>
+        
+        <div [ngSwitch]="pet">
+          <ion-list *ngSwitchCase="'inbox'">
+            <ion-item>
+              <p class="netoo" text-wrap>يرجى الملاحظة : الرسائل التي لم تفتح يتم الغائها بعد مرور ثلاتة ولا يمكن استرجاعها</p>
+            </ion-item>
+          </ion-list>
+        
+          <ion-list *ngSwitchCase="'sendmessages'">
+              <ion-item>
+                  <p class="netoo" text-wrap>يرجى الملاحظة : الرسائل التي لم تفتح يتم الغائها بعد مرور ثلاتة ولا يمكن استرجاعها</p>
+                </ion-item>
+          </ion-list>
+        </div>
+  
+  </ion-content>
+  

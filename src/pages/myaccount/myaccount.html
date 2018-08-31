@@ -1,0 +1,90 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+      <ion-title>لوحة تحكم [ حسابي ]</ion-title>
+            
+    <ion-buttons end>
+      <button ion-button right icon-only (click)="OpenSearch()">
+          <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+    <ion-card>
+
+        <ion-list class="itemslistcontrol">
+          <button ion-item class="itemslistcontrol" (click)="OpenPromotionUser()">
+            <ion-icon name="star"  color="primary" item-start></ion-icon>
+            ترقية العضوية
+          </button>
+      
+          <button ion-item class="itemslistcontrol">
+            <ion-icon name="contact"  color="primary" item-start></ion-icon>
+            معلومات حسابي
+          </button>
+      
+          <button ion-item class="itemslistcontrol" (click)="OpenChangePassword()"> 
+            <ion-icon name="lock"  color="primary" item-start></ion-icon>
+            تعديل كلمة المرور
+          </button>
+          
+          <button ion-item class="itemslistcontrol">
+            <ion-icon name="eye-off"  color="primary" item-start></ion-icon>
+           قائمة التجاهل
+          </button>
+      
+          <button ion-item class="itemslistcontrol" (click)="EditProfile()">
+            <ion-icon name="construct"  color="primary" item-start></ion-icon>
+            تعديل بياناتي
+          </button>
+      
+          <button ion-item class="itemslistcontrol" (click)="EditDescription()">
+              <ion-icon name="cog"  color="primary" item-start></ion-icon>
+              تعديل الوصف
+          </button>
+
+          <button ion-item class="itemslistcontrol" (click)="Album()">
+              <ion-icon name="images"  color="primary" item-start></ion-icon>
+              ادارة البوم الصور
+          </button>
+
+          <button ion-item class="itemslistcontrol">
+              <ion-icon name="document"  color="primary" item-start></ion-icon>
+              سياسة الخصوصية
+            </button>
+
+            <button ion-item class="itemslistcontrol">
+                <ion-icon name="warning"  color="primary" item-start></ion-icon>
+                تحذيرات الأمان
+            </button>
+
+            <button ion-item class="itemslistcontrol">
+              <ion-icon name="help-circle"  color="primary" item-start></ion-icon>
+                  الأسئلة الشائعة
+            </button>
+
+            <button ion-item class="itemslistcontrol">
+                <ion-icon name="help-buoy"  color="primary" item-start></ion-icon>
+                    نصائح و اقتراحات
+            </button>                
+
+            <button ion-item class="itemslistcontrol">
+              <ion-icon name="paper"  color="primary" item-start></ion-icon>
+                      شروط الاستخدام
+            </button>                
+  
+        </ion-list>
+      </ion-card>
+
+    </ion-content>
+

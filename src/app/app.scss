@@ -14,3 +14,43 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+@font-face {
+    font-family: 'Droid-bold';
+    font-style: normal;
+    src: url(../assets/fonts/DroidKufi-Bold.woff2);
+}
+
+@font-face {
+    font-family: 'Droid-reguler';
+    font-style: normal;
+    src: url(../assets/fonts/DroidKufi-Regular.woff2);
+}
+
+* {
+    direction: rtl;
+    font-family: 'Droid-reguler';
+}
+
+.navbaro{
+    text-align: center;
+}
+
+.navbaro img{
+    margin-top: 13px;
+}
+
+.Main-menu {
+    font-size:14px;
+    font-family: 'Droid-bold';
+}
+
+ion-title {
+    font-family: 'Droid-bold';
+}
+
+.dfu-menu-icon {
+    font-size: 22px;
+    color :#25a9c3;
+    margin-left:5px ;
+}

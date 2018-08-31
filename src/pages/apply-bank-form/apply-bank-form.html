@@ -1,0 +1,98 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+      <ion-title>نمودج التحويل</ion-title>
+            
+    <ion-buttons end>
+      <button ion-button right icon-only (click)="Logout()">
+          <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <div padding>
+      <h5>المعلومات الشخصية</h5>
+  </div>
+
+  <ion-list>
+      <ion-item>
+          <ion-label>الاسم الكامل</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>الدولة</ion-label>
+          <ion-select [(ngModel)]="merriedz" okText="اختيار" cancelText="الغاء">
+            <ion-option value="1">المملة العربية السعودية</ion-option>
+            <ion-option value="2">المملكة المغربية</ion-option>
+            <ion-option value="3">الجزائر</ion-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>البريد الالكتروني</ion-label>
+          <ion-input type="text"></ion-input>
+      </ion-item>
+
+        <ion-item>
+          <ion-label>رقم الهاتف</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+    </ion-list>
+
+    <div padding>
+        <h5>تفاصيل الايداع</h5>
+    </div>
+    
+    <ion-list>
+      <ion-item>
+        <ion-label>الاسم الكامل</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label>طريقة الايداع</ion-label>
+          <ion-select [(ngModel)]="encouple" okText="اختيار" cancelText="الغاء">
+            <ion-option value="1">عبر الانترنت المصرفي</ion-option>
+            <ion-option value="2">عبر الصراف الآلي</ion-option>
+            <ion-option value="3">عبر الهاتف المصرفي</ion-option>
+            <ion-option value="4">عبر الايداع النقدي</ion-option>
+            <ion-option value="5">التحويل الدولي</ion-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>اسم البنك</ion-label>
+            <ion-select [(ngModel)]="children" okText="اختيار" cancelText="الغاء">
+              <ion-option value="1">بنك الراجحي</ion-option>
+              <ion-option value="2">البنك العربي</ion-option>
+              <ion-option value="3">انماء</ion-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item>
+              <ion-label>رقم الحساب المحول منه</ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>ملاحظات</ion-label>
+                <ion-input type="text"></ion-input>
+              </ion-item>
+
+            </ion-list>
+    <div>
+      <button ion-button full> ارسال </button>
+    </div>
+    
+
+</ion-content>

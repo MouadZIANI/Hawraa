@@ -1,17 +1,205 @@
+
 <ion-header>
+
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    <ion-title>الرئيسية</ion-title>
+      
+    <ion-buttons end>
+        <button ion-button right icon-only (click)="Logout()">
+            <ion-icon name="log-out"></ion-icon>
+        </button>
+      </ion-buttons>
+
   </ion-navbar>
+
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+
+<ion-content>
+
+    <ion-grid no-padding>
+
+        <ion-row text-center>
+          <ion-col col-4>
+            <p>0</p>
+            <p><ion-icon name="chatbubbles" color="primary" class="fontIcon"></ion-icon></p>
+            <p>رسائل جديدة</p>
+          </ion-col>
+          <ion-col col-4>
+            <p>0</p>
+            <p><ion-icon name="heart" color="danger" class="fontIcon"></ion-icon></p>
+            <p>المعجبون الجدد</p>
+          </ion-col>
+          <ion-col col-4>
+            <p>0</p>
+            <p><ion-icon name="eye" color="primary" class="fontIcon" ></ion-icon></p>
+            <p>زائرين جدد</p>
+          </ion-col>
+        </ion-row>
+
+      </ion-grid>
+
+      <h6 padding><b>الأعضاء المناسبين</b></h6>
+
+      <ion-grid text-center>
+      <ion-slides>
+        <ion-slide>
+         
+              <ion-row text-center>
+                  <ion-col col-3>
+                    <img style="width: 65px; height: 65px; border-radius: 50%;text-align: center;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiPc_Fv1pmtnUhF0AEOTG6sVCZJ3MZq3rRJfZzDyNZcYB_xc4qcQ">
+                    <p class="usersname">نسرين</p>
+                  </ion-col>
+
+                  <ion-col col-3>
+                    <img style="width: 65px; height: 65px; border-radius: 50%;text-align: center;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiPc_Fv1pmtnUhF0AEOTG6sVCZJ3MZq3rRJfZzDyNZcYB_xc4qcQ">
+                    <p class="usersname">سهام اسيف</p>
+                  </ion-col>
+
+                  <ion-col col-3>
+                    <img style="width: 65px; height: 65px; border-radius: 50%;text-align: center;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN6IUyEhkZ29VheQCKWqI4HkCyDvk8JyxdscBJ0rFux5Ni8faT">
+                    <p class="usersname">فاطمة محمد</p>
+                  </ion-col>
+
+                  <ion-col col-3>
+                    <img style="width: 65px; height: 65px; border-radius: 50%;text-align: center;" src="http://static.ounousa.com/Content/ResizedImages/638/654/inside/141119114438104.jpg">
+                    <p class="usersname">هشام امير</p>
+                  </ion-col>
+
+                </ion-row>
+           
+        </ion-slide>
+      </ion-slides>
+    </ion-grid>
+    
+
+      <ion-list padding>
+
+               <h6 padding><b>البحث السريع</b></h6>
+ 
+          <ion-item>
+            <ion-label>الجنس</ion-label>
+            <ion-select [(ngModel)]="gender" okText="اختيار" cancelText="الغاء">
+              <ion-option value="1">ذكر</ion-option>
+              <ion-option value="2">أنثى</ion-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item>
+              <ion-label>بيانات مع صور</ion-label>
+              <ion-checkbox color="primary" checked="true"></ion-checkbox>
+            </ion-item>
+          
+            <ion-item>
+                <ion-label>المتواجدون الان</ion-label>
+                <ion-checkbox color="primary" checked="true"></ion-checkbox>
+              </ion-item>
+              
+              <ion-item>
+                  <ion-label>الهدف</ion-label>
+                  <ion-select [(ngModel)]="merrieda" okText="اختيار" cancelText="الغاء">
+                    <ion-option value="1">زواج عادي</ion-option>
+                    <ion-option value="2">زواج مسار</ion-option>
+                  </ion-select>
+                </ion-item>
+    
+                <ion-item>
+                    <ion-label>الدولة</ion-label>
+                    <ion-select [(ngModel)]="merriedz" okText="اختيار" cancelText="الغاء">
+                      <ion-option value="1">المملة العربية السعودية</ion-option>
+                      <ion-option value="2">المملكة المغربية</ion-option>
+                      <ion-option value="3">الجزائر</ion-option>
+                    </ion-select>
+                  </ion-item>
+
+                  <ion-item>
+                      <ion-label>العمر</ion-label>
+                      <ion-select [(ngModel)]="merried" okText="اختيار" cancelText="الغاء">
+                        <ion-option value="1">18 - 22</ion-option>
+                        <ion-option value="2">23 - 27</ion-option>
+                        <ion-option value="3">28 - 32</ion-option>
+                      </ion-select>
+                    </ion-item>
+
+                  </ion-list>
+                    
+                    <div padding>
+                        <button ion-button full> ابحث </button>
+                      </div>
+
+                      <h6 padding><b>الخطابات</b></h6>
+
+                      <ion-grid text-center>
+                          <ion-slides>
+                            <ion-slide>
+                             
+                                  <ion-row text-center>
+                                      <ion-col col-3>
+                                        <img style="width: 65px; height: 65px; border-radius: 50%;text-align: center;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiPc_Fv1pmtnUhF0AEOTG6sVCZJ3MZq3rRJfZzDyNZcYB_xc4qcQ">
+                                        <p class="usersname">نسرين</p>
+                                      </ion-col>
+                    
+                                                              
+                                      <ion-col col-3>
+                                          <img style="width: 65px; height: 65px; border-radius: 50%;text-align: center;" src="http://static.ounousa.com/Content/ResizedImages/638/654/inside/141119114438104.jpg">
+                                          <p class="usersname">هشام امير</p>
+                                        </ion-col>
+
+                                      <ion-col col-3>
+                                        <img style="width: 65px; height: 65px; border-radius: 50%;text-align: center;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiPc_Fv1pmtnUhF0AEOTG6sVCZJ3MZq3rRJfZzDyNZcYB_xc4qcQ">
+                                        <p class="usersname">سهام اسيف</p>
+                                      </ion-col>
+                    
+                                      <ion-col col-3>
+                                        <img style="width: 65px; height: 65px; border-radius: 50%;text-align: center;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN6IUyEhkZ29VheQCKWqI4HkCyDvk8JyxdscBJ0rFux5Ni8faT">
+                                        <p class="usersname">فاطمة محمد</p>
+                                      </ion-col>
+                    
+                         
+                    
+                                    </ion-row>
+                               
+                            </ion-slide>
+                          </ion-slides>
+                        </ion-grid>
+
+
+                          <h6 padding><b>الأعضاء الجدد</b></h6>
+
+                          <ion-grid text-center>
+                              <ion-slides>
+                                <ion-slide>
+                                 
+                                      <ion-row text-center>
+                                          <ion-col col-3>
+                                            <img style="width: 65px; height: 65px; border-radius: 50%;text-align: center;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiPc_Fv1pmtnUhF0AEOTG6sVCZJ3MZq3rRJfZzDyNZcYB_xc4qcQ">
+                                            <p class="usersname">نسرين</p>
+                                          </ion-col>
+                        
+                                          <ion-col col-3>
+                                            <img style="width: 65px; height: 65px; border-radius: 50%;text-align: center;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiPc_Fv1pmtnUhF0AEOTG6sVCZJ3MZq3rRJfZzDyNZcYB_xc4qcQ">
+                                            <p class="usersname">سهام اسيف</p>
+                                          </ion-col>
+                        
+                                                                  
+                                          <ion-col col-3>
+                                              <img style="width: 65px; height: 65px; border-radius: 50%;text-align: center;" src="http://static.ounousa.com/Content/ResizedImages/638/654/inside/141119114438104.jpg">
+                                              <p class="usersname">هشام امير</p>
+                                            </ion-col>
+
+                                          <ion-col col-3>
+                                            <img style="width: 65px; height: 65px; border-radius: 50%;text-align: center;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN6IUyEhkZ29VheQCKWqI4HkCyDvk8JyxdscBJ0rFux5Ni8faT">
+                                            <p class="usersname">فاطمة محمد</p>
+                                          </ion-col>
+                        
+                                        </ion-row>
+                                   
+                                </ion-slide>
+                              </ion-slides>
+                            </ion-grid>
+
+      
 </ion-content>
